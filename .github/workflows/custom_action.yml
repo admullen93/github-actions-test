@@ -1,0 +1,12 @@
+name: 'Custom Action'
+inputs:
+  example_input:
+    required: true
+    default: 1
+outputs:
+  example_output:
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.example_input}}
